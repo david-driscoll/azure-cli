@@ -196,7 +196,7 @@ for /d /r %BUILDING_DIR%\Lib\site-packages\pip %%d in (__pycache__) do (
 if %errorlevel% neq 0 goto ERROR
 
 echo Building MSI...
-msbuild /t:rebuild /p:Configuration=Release %REPO_ROOT%\build_scripts\windows\azure-cli.wixproj
+"C:\Program Files (x86)\MSBuild\14.0\Bin\msbuild" /t:rebuild /p:Configuration=Release %REPO_ROOT%\build_scripts\windows\azure-cli.wixproj
 
 start %OUTPUT_DIR%
 
